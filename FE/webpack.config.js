@@ -1,15 +1,15 @@
 const path = require('path');
 const webpack = require('webpack');
-const webpackMerge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const modeConfig = env => require(`./build-utils/webpack.${env}`)();
+const modeConfig = (env) => require(`./build-utils/webpack.${env}`)();
 const presetConfig = require('./build-utils/loadPresets');
 const Dotenv = require('dotenv-webpack');
 
-const publicPath = filename => path.join(__dirname, `public/${filename}`);
+const publicPath = (filename) => path.join(__dirname, `public/${filename}`);
 
 module.exports = ({ mode, presets } = { mode: 'production', presets: [] }) =>
-    webpackMerge(
+    merge(
         {
             mode,
             entry: './src/app.jsx',

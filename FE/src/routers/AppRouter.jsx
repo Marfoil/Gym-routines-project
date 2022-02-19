@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { connect } from 'react-redux';
 import 'normalize.css';
 import Login from '../components/Login/Login';
@@ -7,10 +7,10 @@ import Login from '../components/Login/Login';
 const AppRouter = () => {
     return (
         <BrowserRouter>
-            <Switch>
-                <Route path="/" exact={true} component={Login} />
-                <Route render={() => <div>Puuumba</div>} />
-            </Switch>
+            <Routes>
+                <Route path="/" exact={true} element={<Login />} />
+                <Route path="*" element={<div>Puuumba</div>} />
+            </Routes>
         </BrowserRouter>
     );
 };
