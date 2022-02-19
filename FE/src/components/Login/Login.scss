@@ -14,14 +14,10 @@ $breakpoint-mobile: 768px;
 .login {
     display: flex;
     height: 100%;
-    width: 100%;
-    overflow-x: hidden;
     &__welcome-back {
-        overflow-x: hidden;
         z-index: 2;
-        transition: visibility 1s ease-in-out;
+        transition: 1s ease-in-out;
         position: absolute;
-        transition: all 1s ease-in-out;
         width: 30%;
         font-family: 'Quicksand';
 
@@ -32,7 +28,8 @@ $breakpoint-mobile: 768px;
 
         &--inactive {
             visibility: hidden;
-            transform: translateX(-235%);
+            transform: translateX(-100%);
+            transition: none;
         }
 
         &__logo-container {
@@ -83,7 +80,6 @@ $breakpoint-mobile: 768px;
                 }
 
                 @media (max-width: $breakpoint-mobile) {
-                    display: none;
                 }
             }
 
@@ -108,7 +104,6 @@ $breakpoint-mobile: 768px;
     }
 
     &__create-container {
-        overflow-x: hidden;
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -121,7 +116,7 @@ $breakpoint-mobile: 768px;
         z-index: 2;
         width: 70%;
         left: 30%;
-        transition: all 0.8s ease-in-out;
+        transition: 1s ease-in-out;
         font-family: 'Quicksand';
 
         &--active {
@@ -132,6 +127,8 @@ $breakpoint-mobile: 768px;
         &--inactive {
             visibility: hidden;
             transform: translateX(100%);
+            transition: none;
+            width: 0%;
         }
 
         &__social-container {
@@ -231,9 +228,8 @@ $breakpoint-mobile: 768px;
     }
 
     &__login-container {
-        overflow-x: hidden;
         position: absolute;
-        transition: all 0.7s ease-in-out;
+        transition: 1s ease-in-out;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -371,18 +367,18 @@ $breakpoint-mobile: 768px;
         &--inactive {
             visibility: hidden;
             transform: translateX(100%);
+            transition: none;
             opacity: 0;
-            width: 0;
+            width: 0%;
         }
     }
 
     &__hello-container {
-        overflow-x: hidden;
         width: 30%;
         left: 70%;
         position: absolute;
         z-index: 2;
-        transition: all 0.8s ease-in-out;
+        transition: 1s ease-in-out;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -398,18 +394,18 @@ $breakpoint-mobile: 768px;
         &--inactive {
             visibility: hidden;
             transform: translateX(-100%);
+            transition: none;
+            width: 0%;
         }
     }
 
     &__colored-container {
-        overflow-x: hidden;
         position: absolute;
         background-color: $base-color;
         width: 30%;
         height: 100%;
         z-index: 1;
-        transition: transform 1s ease;
-
+        transition: 1s ease;
         &--left {
             transform: translateX(0px);
         }
