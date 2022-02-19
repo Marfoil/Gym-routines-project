@@ -1,0 +1,14 @@
+# dotenv environment variables file
+.env
+
+# next.js build output
+.next
+.vscode/settings.json
+**/.scannerwork/*
+
+# distribution folder
+**/dist
+**/node_modules/**
+**/.vscode
+**/.env
+**/coverage
