@@ -1,17 +1,11 @@
-# CustomPowerBI
+# Gym Routines project
 
-This project contains both (the front end and back end) of the custom reporting application
+This project will contain both (the front end and back end) of the gym routines project (exercices, weights, etc)
 
----
-
-### How to use this project
+On the future the main goal is to be able to manage everything from inside the web (create routines, modify exercices/weights, save changes, etc)
 
 ---
 
-Install docker and run
+The main idea is to have a simple website to manage all the gym routines that we have
 
-```bash
-docker-compose up
-```
-
-Once this command is run docker will set the database, front end and backend
+This project is just done to have fun so it can be reusing code from different repositiories (I will allways adapt/modify de code, not only copy paste), if there is any inconvenience of the code use (you dont like your code to be here, ping me and i will remove it)
